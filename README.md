@@ -1,5 +1,7 @@
 # ContextualMacros
 
+[![GitHub Actions](https://github.com/tkf//ContextualMacros.jl/workflows/Run%20tests/badge.svg)](https://github.com/tkf//ContextualMacros.jl/actions?query=workflow%3ARun+tests)
+
 ContextualMacros.jl is a package for implementing contextual macro
 expansion.
 
