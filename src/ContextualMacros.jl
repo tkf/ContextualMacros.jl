@@ -81,10 +81,10 @@ function with(f; definitions...)
     lock(DEFINITION_LOCK) do
         original = copy(DEFINITION_STACK)
         try
-            push!(DEFINITION_STACK, definitions.data)
+            push!(DEFINITION_STACK, values(definitions))
             f()
         finally
-            expected = vcat(original, [definitions.data])
+            expected = vcat(original, [values(definitions)])
             if !isequal(DEFINITION_STACK, expected)
                 @error("DEFINITION_STACK is corrupted. Trying to recover.")
             end
